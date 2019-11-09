@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "circle-of-fives": {
+    "circle-of-fifths": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/circle-of-fives",
+            "outputPath": "dist/circle-of-fifths",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "circle-of-fives:build"
+            "browserTarget": "circle-of-fifths:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "circle-of-fives:build:production"
+              "browserTarget": "circle-of-fifths:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "circle-of-fives:build"
+            "browserTarget": "circle-of-fifths:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "circle-of-fives:serve"
+            "devServerTarget": "circle-of-fifths:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "circle-of-fives:serve:production"
+              "devServerTarget": "circle-of-fifths:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "circle-of-fives"
+  "defaultProject": "circle-of-fifths"
 }

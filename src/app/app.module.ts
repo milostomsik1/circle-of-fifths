@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CircleOfFifthsComponent } from './circle-of-fifths/circle-of-fifths.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CircleOfFifthsComponent,
   ],
   imports: [
     BrowserModule,

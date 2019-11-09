@@ -1,0 +1,27 @@
+:host {
+  position: absolute;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+}
+
+.major,
+.minor {
+  position: absolute;
+  color: white;
+  font-size: calc(var(--size) * 0.1);
+  // moves down and right half of the parent size minus 50% of element size
+  cursor: pointer;
+  transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%));
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%)) scale(1.05);
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+}
+
+.minor {
+  font-size: calc(var(--size) * 0.07);
+}
