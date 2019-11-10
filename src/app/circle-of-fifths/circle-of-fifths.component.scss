@@ -17,24 +17,26 @@
   color: white;
   font-size: calc(var(--size) * 0.075);
   // moves down and right half of the parent size minus 50% of element size
-  cursor: pointer;
   opacity: 0.8;
   transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%));
   transition: all 0.2s;
+}
 
-  &:hover {
-    @extend .active;
-  }
+.major:hover {
+  @extend .active;
 }
 
 .minor {
   font-size: calc(var(--size) * 0.05);
+
+    cursor: default !important;
 }
 
 .active {
   transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%)) scale(1.05);
   text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
