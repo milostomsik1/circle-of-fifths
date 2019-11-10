@@ -13,7 +13,7 @@ export class CircleOfFifthsComponent implements AfterViewInit {
   size: number;
   currentIndex = 0;
   @HostBinding('attr.style')
-  private get style(): SafeStyle {
+  get style(): SafeStyle {
     return this.sanitizer.bypassSecurityTrustStyle(`
       --size: ${this.size}px;
     `);
