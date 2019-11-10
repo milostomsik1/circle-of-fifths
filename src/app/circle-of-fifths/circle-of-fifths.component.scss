@@ -3,25 +3,63 @@
   display: block;
   width: var(--size);
   height: var(--size);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%, transparent 39%,
+    rgba(255, 255, 255, 0.5) 39% , rgba(255, 255, 255, 0.5) 39.5%,
+    transparent 39.5%, transparent 100%
+  );
 }
 
 .major,
 .minor {
   position: absolute;
   color: white;
-  font-size: calc(var(--size) * 0.1);
+  font-size: calc(var(--size) * 0.075);
   // moves down and right half of the parent size minus 50% of element size
   cursor: pointer;
+  opacity: 0.8;
   transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%));
   transition: all 0.2s;
 
   &:hover {
-    transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%)) scale(1.05);
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
+    @extend .active;
   }
 }
 
 .minor {
-  font-size: calc(var(--size) * 0.07);
+  font-size: calc(var(--size) * 0.05);
+}
+
+.active {
+  transform: translate(calc(var(--size) / 2 - 50%), calc(var(--size) / 2 - 50%)) scale(1.05);
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+  transition: all 0.2s;
+}
+
+.legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(calc(var(--size) / 2 - 25%), calc(var(--size) / 2 - 50%));
+
+  p {
+    padding-left: 15px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: calc(var(--size) * 0.033);
+  }
+
+  p:nth-of-type(1) {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 10px, transparent 10px);
+  }
+
+  p:nth-of-type(2) {
+    background: linear-gradient(90deg, rgba(255, 255, 0, 0.5) 10px, transparent 10px);
+  }
+
+  p:nth-of-type(3) {
+    background: linear-gradient(90deg, rgba(0, 255, 0, 0.5) 10px, transparent 10px);
+  }
 }
