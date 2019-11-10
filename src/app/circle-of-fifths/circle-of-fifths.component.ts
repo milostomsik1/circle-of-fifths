@@ -19,7 +19,7 @@ export class CircleOfFifthsComponent implements AfterViewInit {
     `);
   }
   @HostListener('window:resize', ['$event'])
-  onWindowResize = () => this.setSize()
+  onWindowResize = event => this.setSize()
 
   constructor(
     private sanitizer: DomSanitizer,
